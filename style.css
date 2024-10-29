@@ -1,3 +1,22 @@
 body {
     background-color: lightgreen;
 }
+
+.card img {
+    height: 15em;
+    object-fit: cover;
+}
+
+.checkoutBox {
+    max-height: 500px;
+    overflow: hidden;
+}
+
+#cart-display {
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.cart-items {
+    padding-right: 10px;
+}

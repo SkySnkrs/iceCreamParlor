@@ -16,7 +16,149 @@
 </head>
 
 <body>
+    <header class="container-fluid">
+        <section class="row">
+            <h3 class="col-12 text-center p-2 mt-2">
+                WELCOME TO THE ICE CREAM SHOP
+            </h3>
+            <hr>
+        </section>
+    </header>
 
+    <main class="container-fluid">
+        <section class="row justify-content-evenly">
+            <div class="col-md-3 p-3 shadow-lg text-center mt-5 checkoutBox">
+                <div class="fw-bold p-3">
+                    Checkout
+                </div>
+                <div class="p-2 flex-grow-1 overflow-hidden" id="cart-container">
+                    <div id="cart-display" class="cart-items"></div>
+                </div>
+                <div class="mt-auto p-2">
+                    <h6>Total: <span id="cart-total">0.00</span></h6>
+                    <button onclick="checkout()" class="btn btn-dark btn-border-light">CHECKOUT</button>
+                </div>
+            </div>
+            <div class="col-md-8 p-3">
+                <section class="row justify-content-evenly">
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Vanilla</b>
+                            <img src="https://images.unsplash.com/photo-1529688499411-262f191fe29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDA%3D"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$1</p>
+                                <button onclick="addItemByName('Vanilla')" class="col-lg-6 btn btn-success">ADD TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Chocolate</b>
+                            <img src="https://images.unsplash.com/photo-1515037028865-0a2a82603f7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aWNlJTIwY3JlYW0lMjBib3dsfGVufDB8fDB8fHww"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$1</p>
+                                <button onclick="addItemByName('Chocolate')" class="col-lg-6 btn btn-success">ADD TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Rocky Road</b>
+                            <img src="https://plus.unsplash.com/premium_photo-1663839412090-27840de8cba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3ByaW5rbGVzfGVufDB8fDB8fHww"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$3</p>
+                                <button onclick="addItemByName('Rocky Road')" class="col-lg-6 btn btn-success">ADD TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="row justify-content-evenly">
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Sprinkles</b>
+                            <img src="https://images.unsplash.com/photo-1529688499411-262f191fe29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDA%3D"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$0.25</p>
+                                <button onclick="addItemByName('Sprinkles')" class="col-lg-6 btn btn-success">ADD TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Brownie Bits</b>
+                            <img src="https://images.unsplash.com/photo-1515037028865-0a2a82603f7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aWNlJTIwY3JlYW0lMjBib3dsfGVufDB8fDB8fHww"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$0.25</p>
+                                <button onclick="addItemByName('Brownie Bits')" class="col-lg-6 btn btn-success">ADD
+                                    TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Popping Candy</b>
+                            <img src="https://plus.unsplash.com/premium_photo-1663839412090-27840de8cba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3ByaW5rbGVzfGVufDB8fDB8fHww"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$0.25</p>
+                                <button onclick="addItemByName('Popping Candy')" class="col-lg-6 btn btn-success">ADD TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="row justify-content-evenly">
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Bowl</b>
+                            <img src="https://images.unsplash.com/photo-1529688499411-262f191fe29e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aWNlJTIwY3JlYW18ZW58MHx8MHx8fDA%3D"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">FREE</p>
+                                <button onclick="addItemByName('Bowl')" class="col-lg-6 btn btn-success">ADD TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Waffle Cone</b>
+                            <img src="https://images.unsplash.com/photo-1515037028865-0a2a82603f7c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aWNlJTIwY3JlYW0lMjBib3dsfGVufDB8fDB8fHww"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$2</p>
+                                <button onclick="addItemByName('Waffle Cone')" class="col-lg-6 btn btn-success">ADD
+                                    TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-6 p-3 g-2">
+                        <div class="card card-primary shadow-lg">
+                            <b class="m-3 text-center">Cone</b>
+                            <img src="https://plus.unsplash.com/premium_photo-1663839412090-27840de8cba0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c3ByaW5rbGVzfGVufDB8fDB8fHww"
+                                alt="">
+                            <div class="row justify-content-evenly text-center p-3">
+                                <p class="col-lg-5">$1</p>
+                                <button onclick="addItemByName('Cone')" class="col-lg-6 btn btn-success">ADD TO
+                                    CART</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
     <script src="app.js"></script>
 </body>
 
